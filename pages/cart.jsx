@@ -41,9 +41,6 @@ const Cart = () => {
         <h1 className="text-3xl text-center py-5 font-bold tracking-tight text-gray-900 sm:text-4xl">
           Shopping Cart
         </h1>
-        {/* <h3 className="text-center text-2xl font-medium border border-gray-300 py-2 mx-20 w-1/3 shadow-md">
-          {items?.length > 1 }
-        </h3> */}
         {items?.length == 0 ? (
           <div className="flex flex-col items-center justify-center">
             <Image
