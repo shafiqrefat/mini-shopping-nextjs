@@ -20,8 +20,8 @@ export default async (req, res) => {
         payment_method_types: ["card"],
         line_items: transformedItems,
         mode: 'payment',
-        success_url: `mini-shopping-cart-next.vercel.app/success`,
-        cancel_url: `mini-shopping-cart-next.vercel.app/cancel`,
+        success_url: `${process.env.CUSTOM_URL}/success`,
+        cancel_url: `${process.env.CUSTOM_URL}/cancel`,
         metadata: {
             images: JSON.stringify(items.map((item) => item.image))
         }
