@@ -1,12 +1,6 @@
 import { getCartTotal } from "@/features/products/productsSlice";
 import { HomeIcon } from "@heroicons/react/20/solid";
-import {
-  Bars3Icon,
-  MagnifyingGlassIcon,
-  QuestionMarkCircleIcon,
-  ShoppingBagIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
