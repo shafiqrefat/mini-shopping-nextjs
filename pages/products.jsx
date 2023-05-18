@@ -17,7 +17,7 @@ const Products = () => {
 
   return (
     <div>
-      <h1 className="text-center text-5xl py-8 font-bold">
+      <h1 className="text-center text-3xl md:text-5xl py-8 font-bold mt-10 md:mt-14">
         Welcome to Mini Shop
       </h1>
       {isLoading ? (
@@ -27,7 +27,7 @@ const Products = () => {
       ) : isError ? (
         <p>{error.message}</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-4 py-4">
           {products.map((product) => (
             <Link href={`/product/${product.id}`} key={product?.id}>
               <div className="border border-gray-500 rounded-lg p-2 m-2 text-center shadow-md max-w-sm space-y-3">
@@ -38,7 +38,7 @@ const Products = () => {
                   alt="pdt-img"
                   className="block mx-auto hover:scale-110 transition-all h-[150px] w-[150px]"
                 />
-                <h1 className="text-xl font-normal text-gray-700 mt-auto">
+                <h1 className="text-xl font-normal text-gray-700 mt-auto truncate">
                   {product.title}
                 </h1>
                 <h1 className="text-3xl font-semibold">€{product.price}</h1>

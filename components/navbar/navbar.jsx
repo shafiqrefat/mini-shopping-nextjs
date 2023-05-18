@@ -12,7 +12,7 @@ const Navbar = () => {
     dispatch(getCartTotal());
   }, [items]);
   return (
-    <div className="flex justify-center items-center">
+    <header className="flex justify-center items-center fixed top-0 shadow-md w-full py-3 bg-white z-50">
       <div>
         <ul className="flex gap-x-5 text-2xl">
           <li>
@@ -30,7 +30,7 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

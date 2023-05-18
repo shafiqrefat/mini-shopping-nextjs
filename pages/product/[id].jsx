@@ -29,20 +29,20 @@ const ProductInfo = () => {
   return (
     <Layout>
       {isLoading ? (
-        <p className="flex justify-center items-center h-screen animate-pulse text-3xl">
-          Loading<span className="animate-bounce ml-2">...</span>
-        </p>
+        <div className="h-screen flex items-center justify-center">
+          <div className="h-10 w-10 rounded-full border-2 border-dotted border-blue-900 animate-spin"></div>
+        </div>
       ) : isError ? (
         <p>{error.message}</p>
       ) : (
-        <div className="border border-gray-200 max-w-xs p-5 m-5 rounded-md shadow-md text-center">
+        <div className="mx-auto border border-gray-200 max-w-xs p-5 m-5 rounded-md shadow-md hover:shadow-xl text-center hover:scale-105 transition-transform ease-out duration-200 mt-24 md:mt-20">
           {/* {console.log(product)} */}
           <Image
             width={150}
             height={150}
             src={product.image}
             alt=""
-            className="block mx-auto py-3 hover:scale-110 transition-all"
+            className="block mx-auto"
           />
           <h1 className="text-2xl">{product.title}</h1>
           <div className="flex justify-between items-center py-4">
@@ -65,7 +65,9 @@ const ProductInfo = () => {
               {product.rating.count}
             </h6>
           </div>
-          <p className="text-md text-gray-800">{product.description}</p>
+          <p className="text-md text-gray-800">
+            {product.description}
+          </p>
         </div>
       )}
     </Layout>

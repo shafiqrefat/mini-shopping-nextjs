@@ -38,11 +38,11 @@ const Cart = () => {
   return (
     <Layout>
       <div className="">
-        <h1 className="text-3xl text-center py-5 font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="text-3xl text-center py-5 font-bold tracking-tight text-gray-900 sm:text-4xl mt-14">
           Shopping Cart
         </h1>
         {items?.length == 0 ? (
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center mt-20 md:mt-10">
             <Image
               src={emptyCartImage}
               alt="your cart is empty"
@@ -57,7 +57,7 @@ const Cart = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 md:px-10">
               {items.map((item) => (
                 <div
-                  className="border border-gray-300 p-2 m-2 shadow-md"
+                  className="border border-gray-300 p-2 m-2 shadow-md text-center md:text-start"
                   key={item.id}
                 >
                   <div className="">
@@ -72,7 +72,7 @@ const Cart = () => {
                   </div>
                   <div>
                     <h6 className="mt-2 text-xl font-bold">€ {item.price}</h6>
-                    <div className="flex gap-x-2 py-2">
+                    <div className="flex gap-x-2 py-2 justify-center md:justify-start">
                       <div>
                         {item.quantity == 1 && (
                           <MinusIcon
